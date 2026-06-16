@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fan Mosaic — NOVAKU</title>
+  <meta name="description" content="Upload your photo, choose your national team, and become part of the world's biggest football fan mosaic. Download Fan Mosaic by NOVAKU.">
+  <meta property="og:title" content="Fan Mosaic — NOVAKU">
+  <meta property="og:description" content="Your photo. Their flag. Join thousands of fans building national flag mosaics for the 2026 football tournament.">
+  <meta property="og:image" content="https://novakuapp.github.io/screenshots/mosaic_spain.png">
+  <meta property="og:url" content="https://novakuapp.github.io/">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg:           '#080810',
+            surface:      '#12121E',
+            'surface-2':  '#18182A',
+            border:       '#1E1E30',
+            primary:      '#E61D25',
+            'primary-dk': '#B8141A',
+            accent:       '#4ECBA1',
+            ink:          '#F5F5F7',
+            muted:        '#8E8EA0',
+          },
+          fontFamily: {
+            heading: ['Nunito', 'sans-serif'],
+            body:    ['DM Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    h1, h2, h3 { font-family: 'Nunito', sans-serif; }
+    .phone-frame {
+      border: 3px solid #2A2A3E;
+      border-radius: 2.2rem;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.7);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body class="bg-bg text-ink font-body antialiased">
+
+  <!-- ─── NAVBAR ──────────────────────────────────────────── -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-bg/90 backdrop-blur-md border-b border-border">
+    <div class="max-w-6xl mx-auto px-5 py-3 flex items-center gap-6">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 shrink-0 cursor-pointer">
+        <img src="favicon.png" alt="Fan Mosaic app icon" class="w-7 h-7 rounded-lg">
+        <span class="font-heading font-800 text-sm text-ink leading-none">
+          NOVAKU <span class="text-accent">Fan Mosaic</span>
+        </span>
+      </a>
+      <!-- Legal links — visible on desktop without any menu; on mobile visible in the Legal section below -->
+      <div class="hidden sm:flex items-center gap-5 ml-auto text-xs text-muted">
+        <a href="https://novakuapp.github.io/legal/privacy-policy-en.html"
+           class="hover:text-ink transition-colors duration-200 cursor-pointer whitespace-nowrap">
+          Privacy Policy
+        </a>
+        <a href="https://novakuapp.github.io/legal/terms-en.html"
+           class="hover:text-ink transition-colors duration-200 cursor-pointer whitespace-nowrap">
+          Terms of Service
+        </a>
+      </div>
+      <div class="sm:hidden ml-auto"></div>
+      <!-- Download CTA -->
+      <a href="https://play.google.com/store/apps/details?id=com.novaku.fanmosaic"
+         target="_blank" rel="noopener"
+         class="shrink-0 bg-primary hover:bg-primary-dk text-white font-body font-600 text-xs px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer whitespace-nowrap">
+        Download Free
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <!-- Background: stadium photo -->
+    <div class="absolute inset-0 z-0">
+      <img src="screenshots/stadium_bg.png"
+           alt=""
+           aria-hidden="true"
+           class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-bg/70"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-5 max-w-4xl mx-auto py-28">
+      <div class="inline-flex items-center gap-2 text-accent font-body font-600 text-xs uppercase tracking-widest mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
+        2026 Football Tournament · NOVAKU Fan Mosaic
+      </div>
+
+      <h1 class="font-heading font-900 text-ink leading-[0.95] mb-6"
+          style="font-size: clamp(3.2rem, 10vw, 8rem); text-wrap: balance;">
+        Your photo.<br>
+        <span class="text-primary">Their flag.</span>
+      </h1>
+
+      <p class="text-muted font-body font-400 max-w-md mx-auto mb-12 leading-relaxed"
+         style="font-size: clamp(1rem, 2vw, 1.125rem);">
+        Upload your selfie, pick your national team, and become a pixel in the largest fan mosaic in football.
+      </p>
+
+      <a href="https://play.google.com/store/apps/details?id=com.novaku.fanmosaic"
+         target="_blank" rel="noopener"
+         class="inline-flex items-center gap-3 bg-primary hover:bg-primary-dk text-white font-body font-600 px-8 py-4 rounded-2xl transition-colors duration-200 cursor-pointer text-base">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 8.5c.6.37.6 1.23 0 1.6l-14 8.5c-.66.5-1.6.03-1.6-.8z"/>
+        </svg>
+        Get it on Google Play
+      </a>
+      <p class="text-muted text-xs mt-4 font-body">Free download · Android · Available in 20 languages</p>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─────────────────────────────────────── -->
+  <section class="bg-surface py-24 px-5">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-heading font-800 text-center mb-3"
+          style="font-size: clamp(2rem, 5vw, 3.5rem); text-wrap: balance;">
+        How it works
+      </h2>
+      <p class="text-muted text-center mb-16 font-body max-w-sm mx-auto leading-relaxed">
+        Three steps to become part of history.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="text-center">
+          <div class="font-heading font-900 text-5xl text-accent mb-5 leading-none" aria-hidden="true">01</div>
+          <h3 class="font-heading font-800 text-lg mb-3">Choose your team</h3>
+          <p class="text-muted text-sm leading-relaxed font-body">
+            Pick one of 48 national teams competing in 2026. Your photo will join their flag mosaic exclusively.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="font-heading font-900 text-5xl text-accent mb-5 leading-none" aria-hidden="true">02</div>
+          <h3 class="font-heading font-800 text-lg mb-3">Upload your photo</h3>
+          <p class="text-muted text-sm leading-relaxed font-body">
+            Submit a selfie — ideally wearing your team's kit. Each photo is reviewed before joining the mosaic.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="font-heading font-900 text-5xl text-accent mb-5 leading-none" aria-hidden="true">03</div>
+          <h3 class="font-heading font-800 text-lg mb-3">Join the mosaic</h3>
+          <p class="text-muted text-sm leading-relaxed font-body">
+            Your face becomes a pixel in your national flag. Watch the mosaic reveal as more fans join the crowd.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MOSAIC SHOWCASE + SCREENSHOTS ────────────────────── -->
+  <section class="py-24 px-5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: mosaic image + copy -->
+        <div>
+          <div class="text-accent text-xs font-body font-600 uppercase tracking-widest mb-5">The mosaic</div>
+          <h2 class="font-heading font-800 mb-5 leading-tight"
+              style="font-size: clamp(2rem, 5vw, 3rem); text-wrap: balance;">
+            100 fans.<br>One flag.
+          </h2>
+          <p class="text-muted text-sm leading-relaxed font-body mb-8 max-w-sm">
+            When 100 fans join a team, their selfies assemble into a photographic mosaic of the national flag — an artwork made entirely of real supporters.
+          </p>
+          <img src="screenshots/mosaic_spain.png"
+               alt="Spain national flag mosaic built from 100 fan photos"
+               class="rounded-2xl w-full border border-border shadow-2xl">
+        </div>
+
+        <!-- Right: three phone screenshots -->
+        <div class="grid grid-cols-3 gap-4 items-end">
+          <div class="phone-frame translate-y-6">
+            <img src="screenshots/screen1.png"
+                 alt="Fan Mosaic app home screen showing mosaic unlock progress"
+                 class="w-full block">
+          </div>
+          <div class="phone-frame">
+            <img src="screenshots/screen2.png"
+                 alt="Fan Mosaic app fan card — Fan of Spain, ranked #6"
+                 class="w-full block">
+          </div>
+          <div class="phone-frame translate-y-6">
+            <img src="screenshots/screen3.png"
+                 alt="Fan Mosaic app global team rankings — Spain leads with 6 fans"
+                 class="w-full block">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ─────────────────────────────────────────── -->
+  <section class="bg-surface py-24 px-5">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-heading font-800 text-center mb-16"
+          style="font-size: clamp(2rem, 5vw, 3rem);">
+        Built for fans
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="border border-border rounded-2xl p-7">
+          <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 21V4m0 0h12l-3 4 3 4H4"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-800 text-base mb-2">48 national teams</h3>
+          <p class="text-muted text-sm leading-relaxed font-body">
+            Every nation in the 2026 tournament has its own fan mosaic. Find your team and claim your spot.
+          </p>
+        </div>
+
+        <div class="border border-border rounded-2xl p-7">
+          <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-800 text-base mb-2">Daily mosaics</h3>
+          <p class="text-muted text-sm leading-relaxed font-body">
+            A new photographic mosaic is revealed each day as the tournament unfolds. Watch your team's mosaic grow.
+          </p>
+        </div>
+
+        <div class="border border-border rounded-2xl p-7">
+          <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 8v8m-8-5v5M12 8v8M4 21h16"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-800 text-base mb-2">Global rankings</h3>
+          <p class="text-muted text-sm leading-relaxed font-body">
+            See which national teams have the most fans. Rally supporters to push your nation up the leaderboard.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LEGAL (critical: PP + ToS visible without any menu) ── -->
+  <section id="legal" class="py-24 px-5">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-heading font-800 mb-4"
+          style="font-size: clamp(1.75rem, 4vw, 2.5rem);">
+        Privacy &amp; Legal
+      </h2>
+      <p class="text-muted font-body leading-relaxed mb-10 max-w-lg mx-auto">
+        NOVAKU Fan Mosaic is developed and operated by NOVAKU. We are committed to protecting your privacy. Our full Privacy Policy and Terms of Service are linked below and are always accessible directly on this page — no menu required.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://novakuapp.github.io/legal/privacy-policy-en.html"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-accent text-accent hover:bg-accent hover:text-bg font-body font-600 text-sm px-8 py-3.5 rounded-xl transition-colors duration-200 cursor-pointer">
+          <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          Privacy Policy
+        </a>
+        <a href="https://novakuapp.github.io/legal/terms-en.html"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-border text-muted hover:text-ink hover:border-ink font-body font-600 text-sm px-8 py-3.5 rounded-xl transition-colors duration-200 cursor-pointer">
+          <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+          </svg>
+          Terms of Service
+        </a>
+      </div>
+      <p class="text-muted text-xs mt-8 font-body">
+        These links are also present in the navigation bar above and in the footer below.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────── -->
+  <footer class="bg-surface border-t border-border py-10 px-5">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <img src="favicon.png" alt="NOVAKU" class="w-6 h-6 rounded-md">
+        <span class="text-muted text-sm font-body">NOVAKU &copy; 2026</span>
+      </div>
+      <nav class="flex flex-wrap items-center justify-center gap-6 text-xs text-muted" aria-label="Footer navigation">
+        <a href="https://novakuapp.github.io/legal/privacy-policy-en.html"
+           class="hover:text-ink transition-colors cursor-pointer">Privacy Policy</a>
+        <a href="https://novakuapp.github.io/legal/terms-en.html"
+           class="hover:text-ink transition-colors cursor-pointer">Terms of Service</a>
+        <a href="mailto:moraleda.jon@gmail.com"
+           class="hover:text-ink transition-colors cursor-pointer">Contact</a>
+        <a href="https://play.google.com/store/apps/details?id=com.novaku.fanmosaic"
+           target="_blank" rel="noopener"
+           class="hover:text-ink transition-colors cursor-pointer">Google Play</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
